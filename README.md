@@ -1,4 +1,4 @@
-# Pint
+# Pint 🥤
 
 WIP. Track and record personal daily water intake.
 
