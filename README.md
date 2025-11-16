@@ -1,6 +1,8 @@
 # Pint
 
-Track and record your daily water intake. WIP.
+WIP. Track and record personal daily water intake.
+
+The existing landscape of hydration trackers I've tried are not to my taste, thus this little project.
 
 ## Todo
 
@@ -9,7 +11,7 @@ Track and record your daily water intake. WIP.
 - Graph/viz of some kind to show daily hydration history
 - Support for coffee w/adjusted estimated absorption rate
 - config file under `~/.config/pint`
-- Store/retrieve updates in sqlite under `~/.local/share/pint/`
+- Store/load updates in sqlite under `~/.local/share/pint/`
   - tz-aware timestamp
   - amount
   - unit
@@ -17,3 +19,4 @@ Track and record your daily water intake. WIP.
 - csv data export from sqlite
 - CLI args: updates from command line, csv exports etc
 - help/usage menu?
+- On Halloween, water turns into blood
