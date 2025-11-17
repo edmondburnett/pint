@@ -20,4 +20,5 @@ The existing landscape of hydration trackers I've tried are not to my taste, thu
 - Perhaps a prometheus exporter or something for Grafana homelab nerds
 - CLI args: updates from command line, exports etc
 - help/usage menu?
+- Rename project to something available on crates.io
 - On Halloween, water turns into blood (obviously)
