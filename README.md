@@ -1,4 +1,4 @@
-# Pint 🥤
+# Dram
 
 WIP. Track and record personal daily water intake.
 
@@ -10,8 +10,8 @@ The existing landscape of hydration trackers I've tried are not to my taste, thu
 - Customizable cup sizes
 - Graph/viz of some kind to show daily hydration history
 - Support for coffee w/adjusted estimated absorption rate
-- config file under `~/.config/pint`
-- Store/load updates in sqlite under `~/.local/share/pint/`
+- config file under `~/.config/dram`
+- Store/load updates in sqlite under `~/.local/share/dram/`
   - tz-aware timestamp
   - amount
   - unit
