@@ -1,3 +1,4 @@
+use color_eyre::owo_colors::OwoColorize;
 // use color_eyre::Result;
 use crossterm::event::{self, Event, KeyCode, KeyEvent, KeyEventKind};
 use ratatui::{
@@ -43,7 +44,7 @@ impl App {
     fn draw(&self, frame: &mut Frame) {
         let layout = Layout::default()
             .direction(Direction::Horizontal)
-            .constraints(vec![Constraint::Percentage(50), Constraint::Percentage(50)])
+            .constraints(vec![Constraint::Percentage(15), Constraint::Percentage(85)])
             .split(frame.area());
 
         let meter = Meter::new(self.water_amount, self.water_goal);
@@ -64,7 +65,7 @@ impl App {
     fn handle_key_event(&mut self, key_event: KeyEvent) {
         match key_event.code {
             KeyCode::Char('q') => self.exit(),
-            KeyCode::Char('d') => self.drink(16),
+            KeyCode::Char('d') => self.drink(8),
             _ => {}
         }
     }
@@ -88,7 +89,7 @@ impl Widget for &App {
             "<q> ".blue().bold(),
         ]);
         let block = Block::bordered()
-            .title(title.centered())
+            .title(title.left_aligned())
             .title_bottom(instructions.centered())
             .border_set(border::PLAIN);
 
@@ -125,11 +126,18 @@ impl Widget for &Meter {
     fn render(self, area: Rect, buf: &mut Buffer) {
         let percentage = ((self.water_amount as f64 / self.water_goal as f64) * 100.0) as u16;
         let clamped_percentage = percentage.clamp(u16::MIN, 100);
-        let title = Line::from(percentage.to_string());
+        // let title = Line::from("Meter");
+        let title = Line::from(vec![
+            self.water_amount.to_string().yellow(),
+            "/".into(),
+            self.water_goal.to_string().yellow(),
+            " oz".into(),
+        ]);
 
         VerticalGauge::default()
-            .block(Block::bordered().title(title.centered()))
-            .gauge_style(Style::new().blue().on_light_blue().italic())
+            .block(Block::bordered().title(title.left_aligned()))
+            .gauge_style(Style::new().blue().italic())
+            .label(percentage.to_string() + "%")
             .percent(clamped_percentage)
             .render(area, buf);
     }

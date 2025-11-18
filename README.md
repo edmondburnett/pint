@@ -8,7 +8,6 @@ The existing landscape of hydration trackers I've tried are not to my taste, thu
 
 - Customizable units (metric + imperial/US)
 - Customizable cup sizes
-- Graph/viz of some kind to show daily hydration history
 - Support for coffee w/adjusted estimated absorption rate
 - config file under `~/.config/dram`
 - Store/load updates in sqlite under `~/.local/share/dram/`
@@ -22,4 +21,7 @@ The existing landscape of hydration trackers I've tried are not to my taste, thu
 - help/usage menu?
 - Optionally play a sound, show an internal reminder, or trigger a system notification at drinking intervals during
   a configured time period
+- A log section showing the last N updates, with a scroll bar, datetime, some UI to select and remove entries (accidental additions etc).
+- Graph/viz of some kind to show daily hydration history
+- A chart or display that shows some averages or trends over some time period(s).
 - On Halloween, water turns into blood (obviously)

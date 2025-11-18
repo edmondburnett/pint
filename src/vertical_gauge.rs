@@ -7,7 +7,8 @@ use ratatui::{
     widgets::{Block, Widget},
 };
 
-/// A widget to display a vertical progress bar that fills from bottom to top.
+/// A ratatui widget to display a vertical progress bar that fills from bottom to top.
+/// Based on the original Gauge widget.
 ///
 /// # Example
 ///
