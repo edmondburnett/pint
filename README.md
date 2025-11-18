@@ -20,4 +20,6 @@ The existing landscape of hydration trackers I've tried are not to my taste, thu
 - Perhaps a prometheus exporter or something for Grafana homelab nerds
 - CLI args: updates from command line, exports etc
 - help/usage menu?
+- Optionally play a sound, show an internal reminder, or trigger a system notification at drinking intervals during
+  a configured time period
 - On Halloween, water turns into blood (obviously)
